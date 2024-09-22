@@ -10,7 +10,7 @@
 
 You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net/apps/cli) and *NOT* the unofficial python tool.
 
-## Installation (Generic x86_64)
+## Installation (Generic x86_64) tested with Fedora40, zabbix7.0 and zabbix_agentd2
 
 - Install [speedtest-cli](https://www.speedtest.net/apps/cli)
 - Create `/etc/zabbix/bin`: `mkdir -p /etc/zabbix/bin`
