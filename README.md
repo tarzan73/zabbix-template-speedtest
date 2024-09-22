@@ -18,7 +18,7 @@ You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net
 - Make it executable: `chmod +x /etc/zabbix/bin/zbx-speedtest.sh`
 - Install the systemd service and timer: `cp systemd/{zabbix-speedtest.service,zabbix-speedtest.timer} /etc/systemd/system`
 - Start and enable the timer: `systemctl enable --now zabbix-speedtest.timer`
-- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.conf /etc/zabbix/zabbix_agentd.conf.d`
+- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.conf /etc/zabbix/zabbix_agentd.d`
 - Restart zabbix-agent: `systemctl restart zabbix-agent`
 - Import `template_speedtest.xml` on your Zabbix server
 
