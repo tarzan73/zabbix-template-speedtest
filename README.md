@@ -10,7 +10,7 @@
 
 You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net/apps/cli) and *NOT* the unofficial python tool.
 
-## Installation (Generic x86_64) tested with Fedora40, zabbix7.0 and zabbix_agentd2
+## Installation (Generic x86_64): tested with Fedora40, zabbix7.0 and zabbix_agentd2
 
 - Install [speedtest-cli](https://www.speedtest.net/apps/cli)
 - Create `/etc/zabbix/bin`: `mkdir -p /etc/zabbix/bin`
@@ -22,7 +22,7 @@ You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net
 - Restart zabbix-agent: `systemctl restart zabbix-agent`
 - Import `template_speedtest.xml` on your Zabbix server
 
-## Installation (Debian/Ubuntu)
+## Installation (Debian/Ubuntu): not tested
 
 - Install [speedtest-cli](https://www.speedtest.net/apps/cli)
 - Create `/etc/zabbix/bin`: `mkdir -p /etc/zabbix/bin`
@@ -34,7 +34,7 @@ You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net
 - Restart zabbix-agent: `systemctl restart zabbix-agent`
 - Import `template_speedtest.xml` on your Zabbix server
 
-## Installation (OpenWRT)
+## Installation (OpenWRT): not tested
 
 - Install [speedtest-cli](https://www.speedtest.net/apps/cli) by placing the binary in your `$PATH`
 - Copy `zbx-speedtest.sh` to `/etc/zabbix_agentd.conf.d/bin`
@@ -44,7 +44,7 @@ You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net
 - Install the cron job: `crontab -e` -> Add the content of `systemd/speedtest.crontab`
 - Import `template_speedtest.xml` on your Zabbix server
 
-## Installation (Docker)
+## Installation (Docker): not tested
 
 ###  Speedtest in a container
 
