@@ -18,7 +18,7 @@ You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net
 - Make it executable: `chmod +x /etc/zabbix/bin/zbx-speedtest.sh`
 - Install the systemd service and timer: `cp systemd/{zabbix-speedtest.service,zabbix-speedtest.timer} /etc/systemd/system`
 - Start and enable the timer: `systemctl enable --now zabbix-speedtest.timer`
-- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.conf /etc/zabbix/zabbix_agentd.d`
+- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.conf /etc/zabbix/zabbix_agentd.d/`
 - Restart zabbix-agent: `systemctl restart zabbix-agent`
 - Import `template_speedtest.xml` on your Zabbix server
 
@@ -30,7 +30,7 @@ You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net
 - Make it executable: `chmod +x /etc/zabbix/bin/zbx-speedtest.sh`
 - Install the systemd service and timer: `cp systemd/{zabbix-speedtest-debian.service,zabbix-speedtest.timer} /etc/systemd/system; mv /etc/systemd/system/zabbix-speedtest{-debian,}.service`
 - Start and enable the timer: `systemctl enable --now zabbix-speedtest.timer`
-- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.conf /etc/zabbix/zabbix_agentd.conf.d`
+- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.conf /etc/zabbix/zabbix_agentd.conf.d/`
 - Restart zabbix-agent: `systemctl restart zabbix-agent`
 - Import `template_speedtest.xml` on your Zabbix server
 
@@ -39,7 +39,7 @@ You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net
 - Install [speedtest-cli](https://www.speedtest.net/apps/cli) by placing the binary in your `$PATH`
 - Copy `zbx-speedtest.sh` to `/etc/zabbix_agentd.conf.d/bin`
 - Make it executable: `chmod +x /etc/zabbix_agentd.conf.d/bin/zbx-speedtest.sh`
-- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.openwrt.conf /etc/zabbix_agentd.conf.d`
+- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.openwrt.conf /etc/zabbix_agentd.conf.d/`
 - Restart zabbix-agent: `/etc/init.d/zabbix-agentd restart`
 - Install the cron job: `crontab -e` -> Add the content of `systemd/speedtest.crontab`
 - Import `template_speedtest.xml` on your Zabbix server
