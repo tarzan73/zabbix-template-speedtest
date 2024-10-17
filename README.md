@@ -14,9 +14,9 @@ You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net
 
 - Install [speedtest-cli](https://www.speedtest.net/apps/cli)
 - Create `/etc/zabbix/bin`: `mkdir -p /etc/zabbix/bin`
-- Copy `zbx-speedtest.sh` to `/etc/zabbix/bin`
+- Copy `zbx-speedtest.sh` to `/etc/zabbix/bin/`
 - Make it executable: `chmod +x /etc/zabbix/bin/zbx-speedtest.sh`
-- Install the systemd service and timer: `cp systemd/{zabbix-speedtest.service,zabbix-speedtest.timer} /etc/systemd/system`
+- Install the systemd service and timer: `cp systemd/{zabbix-speedtest.service,zabbix-speedtest.timer} /etc/systemd/system/`
 - Start and enable the timer: `systemctl enable --now zabbix-speedtest.timer`
 - Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.conf /etc/zabbix/zabbix_agentd.d/`
 - Restart zabbix-agent: `systemctl restart zabbix-agent`
@@ -28,9 +28,9 @@ You need to install [Ookla's version of speedtest-cli](https://www.speedtest.net
 - Create `/etc/zabbix/bin`: `mkdir -p /etc/zabbix/bin`
 - Copy `zbx-speedtest-debian.sh` to `/etc/zabbix/bin/zbx-speedtest.sh`
 - Make it executable: `chmod +x /etc/zabbix/bin/zbx-speedtest.sh`
-- Install the systemd service and timer: `cp systemd/{zabbix-speedtest-debian.service,zabbix-speedtest.timer} /etc/systemd/system; mv /etc/systemd/system/zabbix-speedtest{-debian,}.service`
+- Install the systemd service and timer: `cp systemd/{zabbix-speedtest-debian.service,zabbix-speedtest.timer} /etc/systemd/system/; mv /etc/systemd/system/zabbix-speedtest{-debian,}.service`
 - Start and enable the timer: `systemctl enable --now zabbix-speedtest.timer`
-- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.conf /etc/zabbix/zabbix_agentd.conf.d/`
+- Import the zabbix-agent config: `cp zabbix_agentd.d/speedtest.conf /etc/zabbix/zabbix_agentd.d/`
 - Restart zabbix-agent: `systemctl restart zabbix-agent`
 - Import `template_speedtest.xml` on your Zabbix server
 
