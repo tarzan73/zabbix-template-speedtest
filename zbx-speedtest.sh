@@ -3,7 +3,14 @@
 set -e
 
 DATA_FILE=/tmp/speedtest.json
+SPD_OPTIONS="--accept-license --accept-gdpr"
+SPD_SERVER_ID=
 
+if $SPD_SERVER_ID 
+then
+  SPD_OPTIONS="${SPD_OPTIONS} -s $SPD_SERVER_ID"
+fi
+  
 usage() {
   echo "Usage: \"$(basename "$0")\" OPTION"
   echo
@@ -161,7 +168,7 @@ case "$ACTION" in
     get_data_timestamp
     ;;
   run)
-    if speedtest --accept-license --accept-gdpr -f json > "${DATA_FILE}.new"
+    if speedtest "${SPD_OPTIONS}" -f json > "${DATA_FILE}.new"
     then
       mv "${DATA_FILE}.new" "$DATA_FILE"
     fi
